@@ -1,0 +1,7 @@
+.BasicItemInfo {
+  display: flex;
+}
+.BasicItemInfo > div {
+  flex: 1; /*grow*/
+  width: 200px;
+}

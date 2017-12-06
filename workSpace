@@ -1,0 +1,59 @@
+<NotepadPlus>
+    <Project name="perfectPortal">
+        <Folder name="app">
+            <Folder name="components">
+                <Folder name="container">
+                    <File name="app\components\container\SignInContainer.js" />
+                </Folder>
+                <Folder name="presentational">
+                    <File name="app\components\presentational\PortalDisplay.js" />
+                    <File name="app\components\presentational\SignInDisplay.js" />
+                </Folder>
+            </Folder>
+            <Folder name="productTerminal">
+                <Folder name="actions">
+                    <File name="app\productTerminal\actions\actions.js" />
+                </Folder>
+                <Folder name="components">
+                    <Folder name="container">
+                        <File name="app\productTerminal\components\container\ItemInfo.css" />
+                        <File name="app\productTerminal\components\container\ItemInfo.js" />
+                        <File name="app\productTerminal\components\container\ItemsContainer.js" />
+                        <File name="app\productTerminal\components\container\OptionsContainer.js" />
+                        <File name="app\productTerminal\components\container\SearchCriteriaContainer.js" />
+                    </Folder>
+                    <Folder name="presentational">
+                        <File name="app\productTerminal\components\presentational\BasicItemInfo.css" />
+                        <File name="app\productTerminal\components\presentational\BasicItemInfo.js" />
+                        <File name="app\productTerminal\components\presentational\ItemAppDisplay.css" />
+                        <File name="app\productTerminal\components\presentational\ItemAppDisplay.js" />
+                        <File name="app\productTerminal\components\presentational\ItemDisplay.css" />
+                        <File name="app\productTerminal\components\presentational\ItemDisplay.js" />
+                        <File name="app\productTerminal\components\presentational\OptionsDisplay.css" />
+                        <File name="app\productTerminal\components\presentational\OptionsDisplay.js" />
+                        <File name="app\productTerminal\components\presentational\SearchCriterion.js" />
+                        <File name="app\productTerminal\components\presentational\SearchMenu.css" />
+                        <File name="app\productTerminal\components\presentational\SingleItemContainer.js" />
+                    </Folder>
+                </Folder>
+                <Folder name="reducers">
+                    <File name="app\productTerminal\reducers\itemAppReducer.js" />
+                </Folder>
+            </Folder>
+            <File name="app\bundle.js" />
+            <File name="app\bundle.js.map" />
+            <File name="app\main.js" />
+            <File name="app\package.json" />
+        </Folder>
+        <File name=".babelrc" />
+        <File name="index.css" />
+        <File name="index.html" />
+        <File name="package.json" />
+        <File name="phpInfo.php" />
+        <File name="productModule.js" />
+        <File name="productTerminal.html" />
+        <File name="state map.txt" />
+        <File name="utils.js" />
+        <File name="webpack.config.js" />
+    </Project>
+</NotepadPlus>

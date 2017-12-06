@@ -1,0 +1,7 @@
+.ItemAppContainer {
+  display: flex;
+}
+
+.ItemAppContainer > div {
+  padding: 5px;
+}

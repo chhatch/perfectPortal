@@ -1,0 +1,7 @@
+.ItemDisplay {
+  display: flex;
+}
+.ItemDisplay > div {
+  flex: 1; /*grow*/
+  width: 200px;
+}

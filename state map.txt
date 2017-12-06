@@ -1,0 +1,19 @@
+const state = {
+    items: {
+        [{
+            cost: int,
+            retail: int,
+            expanded: false,
+            itemInfo: {
+                colors: [],
+                materials: []
+            }
+        }]
+    },
+    criteria: {
+        tags: [],
+        manufacturers: [],
+        colors: [],
+        materials: []
+    }
+};
