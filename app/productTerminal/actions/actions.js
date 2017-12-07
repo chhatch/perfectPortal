@@ -107,39 +107,3 @@ export const initialize = (idToken) => {
         });
     }
 }
-
-/*const initialState = {
-    items: [
-        {
-            name: "Test10",
-            cost: 15,
-            retail: 20,
-            hidden: true
-        },
-        {
-            name: "Test2",
-            cost: 12,
-            retail: 17,
-            hidden: true
-        },
-        {
-            name: "The Program",
-            cost: "Too much",
-            retail: "Not enough",
-            hidden: true
-        },
-        {
-            name: "Yo Mamma",
-            cost: 12,
-            retail: 17,
-            hidden: true
-        }
-    ],
-    criteria: ["test", "importantCriteria", "Color", "Material"]
-};
-
-const request = new Request("http://splashzones.com/api/items", {
-    method: "GET",
-    //mode: "no-cors",
-    headers: new Headers({})
-});*/
