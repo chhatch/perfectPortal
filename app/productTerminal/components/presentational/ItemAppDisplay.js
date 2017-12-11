@@ -5,7 +5,7 @@ import ItemsContainer from "\\productTerminal\\components\\container\\ItemsConta
 import SignInContainer from "\\components\\container\\SignInContainer.js";
 import styles from "\\productTerminal\\components\\presentational\\ItemAppDisplay.css"
 
-class ItemAppContainer extends React.Component {
+class ItemAppDisplay extends React.Component {
     constructor(props) {
         super(props);
         console.log(React.version);
@@ -31,4 +31,4 @@ class ItemAppContainer extends React.Component {
         this.setState({hasError: true});
     }
 }
- export default ItemAppContainer;
+ export default ItemAppDisplay;

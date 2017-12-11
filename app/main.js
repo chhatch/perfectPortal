@@ -10,6 +10,7 @@ import reduxCatch from 'redux-catch';
 import StackTrace from 'stacktrace-js'
 
 import itemAppReducer from "./productTerminal/reducers/itemAppReducer.js"
+import uploaderAppReducer from "./picUploader/reducers/uploaderAppReducer.js"
 import PortalDisplay from "./components/presentational/PortalDisplay.js";
 
 const tempHandler = (error, getState, lastAction) => {
@@ -19,7 +20,8 @@ const tempHandler = (error, getState, lastAction) => {
 // ========================================
     const history = createHistory();
     const store = createStore(combineReducers({
-        itemAppReducer,
+        itemApp: itemAppReducer,
+        uploaderApp: uploaderAppReducer,
         routing: routerReducer
         }),
         applyMiddleware(reduxCatch(tempHandler), routerMiddleware(history), thunkMiddleware));

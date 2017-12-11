@@ -12,7 +12,7 @@ const ItemDisplay = (props) => {
             <ul>
                 {props.items.map((item,index) => {
                    return <SingleItemContainer index={index} item={item}  key={index} handleClick={props.handleClick}/>;
-                   })}
+                })}
             </ul>
         </div>
     );

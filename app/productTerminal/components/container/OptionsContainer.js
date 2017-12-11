@@ -3,7 +3,7 @@ import OptionsDisplay from "../presentational/OptionsDisplay.js";
 
 const mapStateToProps = state => {
     return {
-        criteria: state.itemAppReducer.criteria
+        criteria: state.itemApp.criteria
     }
 }
 

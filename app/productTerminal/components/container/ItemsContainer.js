@@ -4,7 +4,7 @@ import { toggleItemInfo } from "\\productTerminal\\actions\\actions.js"
 
 const mapStateToProps = state => {
     return {
-        items: state.itemAppReducer.items
+        items: state.itemApp.items
     }
 }
 

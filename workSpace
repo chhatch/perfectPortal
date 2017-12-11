@@ -4,6 +4,7 @@
             <Folder name="components">
                 <Folder name="container">
                     <File name="app\components\container\SignInContainer.js" />
+                    <File name="app\components\presentational\PortalToolBar.js" />
                 </Folder>
                 <Folder name="presentational">
                     <File name="app\components\presentational\PortalDisplay.js" />
@@ -40,6 +41,20 @@
                     <File name="app\productTerminal\reducers\itemAppReducer.js" />
                 </Folder>
             </Folder>
+            <Folder name="picUploader">
+                <Folder name="actions" />
+                <Folder name="components">
+                    <Folder name="presentational" />
+                    <Folder name="container">
+                        <File name="app\picUploader\components\container\Uploader.js" />
+                        <File name="app\picUploader\components\container\UploaderContainer.js" />
+                    </Folder>
+                </Folder>
+                <Folder name="reducers">
+                    <File name="app\picUploader\reducers\uploaderAppReducer.js" />
+                </Folder>
+            </Folder>
+            <Folder name="inspectionForm" />
             <File name="app\bundle.js" />
             <File name="app\bundle.js.map" />
             <File name="app\main.js" />
@@ -49,11 +64,7 @@
         <File name="index.css" />
         <File name="index.html" />
         <File name="package.json" />
-        <File name="phpInfo.php" />
-        <File name="productModule.js" />
-        <File name="productTerminal.html" />
         <File name="state map.txt" />
-        <File name="utils.js" />
         <File name="webpack.config.js" />
     </Project>
 </NotepadPlus>
