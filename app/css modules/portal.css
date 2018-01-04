@@ -1,0 +1,12 @@
+.portalDisplay {
+    width: 600px;
+}
+
+.portalDisplayWrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.portalHeader {
+    position: relative;
+}

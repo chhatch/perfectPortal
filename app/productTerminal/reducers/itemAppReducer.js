@@ -1,7 +1,3 @@
-import {
-    combineReducers
-} from 'redux'
-
 const itemAppReducer = function (state, action) {
     switch (action.type) {
         case "SET_INITIAL_STATE":

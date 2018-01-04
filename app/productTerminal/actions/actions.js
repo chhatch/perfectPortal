@@ -1,3 +1,4 @@
+//items
 export const toggleItemInfo = index => {
   return {
     type: 'TOGGLE_ITEM_INFO',
@@ -39,31 +40,10 @@ export const setInitialState = initialState => {
 export const setIdToken = idToken => {
     return {
         type: "SET_ID_TOKEN",
-        id_token
+        id_token: idToken
     }
 }
 
-
-
-
-
-//////////THUNK//////////
-export const googleSignIn = parameters => {
-    let auth2 = gapi.auth2.getAuthInstance();
-    let idToken = auth2.currentUser.get().getAuthResponse().id_token;
-    console.log("Login successful!");
-    var profile = auth2.currentUser.get().getBasicProfile();
-    console.log('ID: ' + profile.getId());
-    console.log('Full Name: ' + profile.getName());
-    console.log('Given Name: ' + profile.getGivenName());
-    console.log('Family Name: ' + profile.getFamilyName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
-      
-    return dispatch => {
-        dispatch(initialize(idToken));
-    }
-}
 
 
 
