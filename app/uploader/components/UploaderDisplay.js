@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
-import Uploader from "../container/Uploader.js"
+import Uploader from "./Uploader.js"
 import ProjectSelector from "./ProjectSelector.js"
 import FileCounter from "./FileCounter.js"
-import { setSelectedProject, uploadPics } from "../../../uploader/actions/actions.js"
+import { setSelectedProject, uploadPics } from "../../uploader/actions/actions.js"
 
 let UploaderDisplay = (props) => {
     return (

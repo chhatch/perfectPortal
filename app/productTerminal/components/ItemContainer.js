@@ -39,4 +39,4 @@ ItemContainer = connect(
     mapDispatchToProps
 )(ItemContainer);
 
-export ItemContainer;
+export { ItemContainer };

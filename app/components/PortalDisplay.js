@@ -7,17 +7,20 @@ import PortalHeader from "./PortalHeader.js"
 import Home from "../home/components/Home.js"
 import ItemAppDisplay from "../productTerminal/components/ItemAppDisplay.js"
 import UploaderDisplay from "../uploader/components/UploaderDisplay.js"
+import Loading from "../loading/components/Loading.js"
 
-import styles from "../../css modules/portal.css"
+import styles from "../css modules/portal.css"
 
 let PortalDisplay = (props) => {
     return (
         <div className={styles.portalDisplayWrapper}>
             <div className={styles.portalDisplay}>
-                <PortalHeader routeToApp={props.routeToApp}/>
+                <PortalHeader routeToApp={props.routeToApp} appPath={props.routing.location.pathname}/>
+                <Loading />
                 <Route exact={true} path="/perfectPortal/home" component={Home}/>
                 <Route exact={true} path="/perfectPortal/items" component={ItemAppDisplay}/>
                 <Route exact={true} path="/perfectPortal/uploads" component={UploaderDisplay}/>
+                <Route exact={true} path="/perfectPortal/loading" component={Loading}/>
             </div>
         </div>
     );

@@ -1,12 +1,58 @@
 .portalDisplay {
     width: 600px;
+    height: 100vh;
+    display: inline-block;
+    background-color: rgba(169, 169, 169, 1);
+    position: relative;
+    z-index: 0;
 }
 
 .portalDisplayWrapper {
     width: 100%;
     text-align: center;
+    background-color: black;
 }
 
 .portalHeader {
     position: relative;
+    height: 100px;
+}
+
+.routeButtonsContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    top: 70px;
+    width: 100%;
+    border-bottom: solid #030f62;
+    background-color: #c3eeff;
+}
+
+.routeButton {
+    flex-grow: 0;
+    flex-basis: 100px;
+    border: solid #030f62;
+    margin-bottom: -3px;
+    background-color: #c3eeff;
+    cursor: pointer;
+}
+
+.routeButtonSelected {
+    flex-grow: 0;
+    flex-basis: 100px;
+    border: solid #030f62;
+    margin-bottom: -3px;
+    background-color: rgba(169, 169, 169, 1);
+    cursor: pointer;
+}
+
+.routeButton:hover {
+    flex-grow: 0;
+    flex-basis: 100px;
+    border: solid #030f62;
+    margin-bottom: -3px;
+    background-color: white;
+    cursor: pointer;
 }

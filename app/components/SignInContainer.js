@@ -9,13 +9,17 @@ class SignInContainer extends React.Component {
     }
     
     render(props) {
+        console.log(this.props);
         if(this.props.signedIn) {
-            return ""
+            return (
+            <div className={styles.signInDisplay} >
+                < GoogleLogout backgroundColor="gray" text="Sign Out" width="150px"/>
+            </div>
+            )
         } else {
             return (
             <div className={styles.signInDisplay} >
                 < GoogleLogin backgroundColor="gray" text="Sign In" width="140px"/>
-                < GoogleLogout backgroundColor="gray" text="Sign Out" width="150px"/>
             </div>
             );
         }
@@ -24,7 +28,7 @@ class SignInContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        signedIn: state.signedIn
+        signedIn: state.portal.signedIn
     }
 }
 

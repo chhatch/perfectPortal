@@ -1,5 +1,5 @@
 import BasicItemInfo from "./BasicItemInfo.js";
-import ItemInfo from "../container/ItemInfo.js";
+import ItemInfo from "./ItemInfo.js";
 
 const SingleItemContainer = props => {
     return (

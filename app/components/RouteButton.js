@@ -1,13 +1,20 @@
 import { Route } from 'react-router-dom'
+import styles from "../css modules/portal.css"
 
-const RouteButton = (props) => {return (
-    <button
-        type='button'
-        onClick={() => { props.routeToApp(props.path, props.app); }}
-        >
-        {props.title}
-    </button>
-)}
+const RouteButton = (props) => {
+    console.log(props.buttonPath + " : " + props.appPath);
+    if (props.buttonPath === props.appPath) {
+        return(
+            <div className={styles.routeButtonSelected} onClick={() => { props.routeToApp(props.buttonPath, props.app); }} >
+                {props.title}
+            </div>
+    )} else {
+        return(
+            <div className={styles.routeButton} onClick={() => { props.routeToApp(props.buttonPath, props.app); }} >
+                {props.title}
+            </div>
+    )}
+}
   
  export default RouteButton;
 

@@ -1,8 +1,7 @@
 //api calls here
 const path = require('path');
 import OptionsContainer from "./OptionsContainer.js";
-import ItemsContainer from "./ItemsContainer.js";
-import SignInContainer from "./SignInContainer.js";
+import ItemsContainer from "./ItemContainer.js";
 import styles from "./ItemAppDisplay.css"
 
 class ItemAppDisplay extends React.Component {

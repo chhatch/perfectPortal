@@ -25,9 +25,9 @@ const tempHandler = (error, getState, lastAction) => {
         applyMiddleware(reduxCatch(tempHandler), actionLogger, routerMiddleware(history), thunkMiddleware)),
         onSignIn = (status) => {
             if (status) {
-                store.dispatch(googleSignIn);
+                store.dispatch(googleSignIn());
             } else {
-                store.dispatch(googleSignOut);
+                store.dispatch(googleSignOut());
             }
         }    
                 

@@ -10,11 +10,10 @@
                 <File name="app\components\PortalHeader.js" />
                 <File name="app\components\RouteButton.js" />
                 <File name="app\components\SignInContainer.js" />
-                <File name="app\components\SignInDisplay.js" />
             </Folder>
             <Folder name="css modules">
                 <File name="app\css modules\portal.css" />
-                <File name="app\css modules\signInDisplay.css" />
+                <File name="app\css modules\signInContainer.css" />
                 <File name="app\css modules\signInOutButton.js" />
                 <File name="app\css modules\uploader.css" />
             </Folder>
@@ -48,13 +47,12 @@
                 <Folder name="components">
                     <File name="app\productTerminal\components\BasicItemInfo.css" />
                     <File name="app\productTerminal\components\BasicItemInfo.js" />
+                    <File name="app\productTerminal\components\ItemContainer.js" />
                     <File name="app\productTerminal\components\ItemAppDisplay.css" />
                     <File name="app\productTerminal\components\ItemAppDisplay.js" />
                     <File name="app\productTerminal\components\ItemDisplay.css" />
-                    <File name="app\productTerminal\components\ItemDisplay.js" />
                     <File name="app\productTerminal\components\ItemInfo.css" />
                     <File name="app\productTerminal\components\ItemInfo.js" />
-                    <File name="app\productTerminal\components\ItemsContainer.js" />
                     <File name="app\productTerminal\components\OptionsContainer.js" />
                     <File name="app\productTerminal\components\OptionsDisplay.css" />
                     <File name="app\productTerminal\components\OptionsDisplay.js" />

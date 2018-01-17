@@ -1,4 +1,4 @@
-import styles from "../../../css modules/uploader.css"
+import styles from "../../css modules/uploader.css"
 
 const Uploader = (props) => {
     return (

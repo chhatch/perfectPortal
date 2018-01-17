@@ -1,4 +1,4 @@
-import styles from "../../../css modules/uploader.css"
+import styles from "../../css modules/uploader.css"
 import { FileCounterDetails } from "./FileCounterDetails.js"
 
 class FileCounter extends React.Component {
@@ -30,17 +30,17 @@ class FileCounter extends React.Component {
             <div className={styles.fileCounter}>
                 <div onClick={(e) => {this.showHideDetails("pendingDetailsHidden");}}
                     className={pendingDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
-                    Pending Uploads: {this.props.pendingUploads.length}
+                    Pending Uploads: {pendingUploads.length}
                     < FileCounterDetails files={pendingUploads} hidden={pendingDetailsHidden}/>
                 </div>
                 <div onClick={(e) => {this.showHideDetails("successfulDetailsHidden");}}
                     className={successfulDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
-                    Successful Uploads: {this.props.successfulUploads.length}
+                    Successful Uploads: {successfulUploads.length}
                     < FileCounterDetails files={successfulUploads} hidden={successfulDetailsHidden}/>
                 </div>
                 <div onClick={(e) => {this.showHideDetails("failedDetailsHidden");}}
                     className={failedDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
-                    Failed Uploads: {this.props.failedUploads.length}
+                    Failed Uploads: {failedUploads.length}
                     < FileCounterDetails files={failedUploads} hidden={failedDetailsHidden}/>
                 </div>
             </div>

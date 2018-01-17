@@ -1,4 +1,4 @@
-import styles from "../../../css modules/uploader.css"
+import styles from "../../css modules/uploader.css"
 
 export const FileCounterDetails = (props) => {
     if (props.files.length > 0 && !props.hidden) {
