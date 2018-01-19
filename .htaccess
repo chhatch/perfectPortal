@@ -1,5 +1,5 @@
 #these commands allow the page to be refreshed
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ "/perfectPortal" [R=307,L]
+#RewriteRule ^(.*)$ "/perfectPortal" [R=307,L]
 #307 means moving temporarily, but it keeps post method and data intact

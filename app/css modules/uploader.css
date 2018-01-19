@@ -24,6 +24,8 @@
 .fileCounter {
     position: absolute;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     z-index: 1
 }
@@ -162,4 +164,14 @@
 .retryFailedButton:hover {
     color: black;
     border: 2px solid black;
+}
+
+@media only screen and (min-width: 600px) {
+    .fileCounter {
+        position: absolute;
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        z-index: 1
+    }
 }

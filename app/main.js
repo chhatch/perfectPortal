@@ -33,7 +33,7 @@ const tempHandler = (error, getState, lastAction) => {
                 
     // Create an enhanced history that syncs navigation events with the store
     ReactDOM.render(
-        <GoogleAPI clientId="568076525910-ppfurf2g2htmetp48gjfk4h2havmmu12.apps.googleusercontent.com"
+        <GoogleAPI clientId="568076525910-i8tua6ljt3mj4m0vrg0ljl8i75n2b71t.apps.googleusercontent.com"
             onUpdateSigninStatus={(status) => onSignIn(status)}
             onInitFailure={onSignIn} >
             <Provider store={store}>
@@ -53,3 +53,4 @@ console.log(store.getState())
 const unsubscribe = store.subscribe(() =>
   console.log(store.getState())
 )
+
