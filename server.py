@@ -6,7 +6,7 @@ HOST_NAME = 'localhost'
 PORT_NUMBER = 8080
 REDIRECTIONS = {
 }
-LAST_RESORT = "http://localhost:8080/"
+LAST_RESORT = "http://localhost:8080/perfectPortal"
 
 class RedirectHandler(BaseHTTPRequestHandler):
     def __init__(self, request, client_address, server):
@@ -31,7 +31,7 @@ class RedirectHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/css')
             self.end_headers()
             self.wfile.write(css)
-        elif self.path != "/":
+        elif self.path != "/perfectPortal":
             self.do_HEAD()
         else:
             with open("./index.html", "rb") as html:
