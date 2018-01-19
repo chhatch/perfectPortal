@@ -99,7 +99,7 @@ export const googleSignIn = parameters => {
 
 export const googleSignOut = () => {
     return (dispatch, getState) => {
-        const home = "/"; //lol
+        const home = "/perfectPortal";
         console.log("Signed out.");
         dispatch(updateSignInStatus(false));
         dispatch(unsetIdToken());
