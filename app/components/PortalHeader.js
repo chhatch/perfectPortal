@@ -9,9 +9,9 @@ const PortalHeader = (props) => {
         <div className={styles.portalHeader}>
             <SignInContainer />
             <div className={styles.routeButtonsContainer}>
-                <RouteButton title="Home" buttonPath="/perfectPortal/home" app="homeApp" routeToApp={props.routeToApp} appPath={props.appPath}/>
-                <RouteButton title="Items" buttonPath="/perfectPortal/items" app="itemsApp" routeToApp={props.routeToApp} appPath={props.appPath}/>
-                <RouteButton title="Uploads" buttonPath="/perfectPortal/uploads" app="uploaderApp" routeToApp={props.routeToApp} appPath={props.appPath}/>
+                <RouteButton title="Home" buttonPath="/" app="homeApp" routeToApp={props.routeToApp} appPath={props.appPath}/>
+                <RouteButton title="Items" buttonPath="/items" app="itemsApp" routeToApp={props.routeToApp} appPath={props.appPath}/>
+                <RouteButton title="Uploads" buttonPath="/uploads" app="uploaderApp" routeToApp={props.routeToApp} appPath={props.appPath}/>
             </div>
         </div>
     );

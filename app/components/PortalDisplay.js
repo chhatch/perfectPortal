@@ -16,11 +16,10 @@ let PortalDisplay = (props) => {
         <div className={styles.portalDisplayWrapper}>
             <div className={styles.portalDisplay}>
                 <PortalHeader routeToApp={props.routeToApp} appPath={props.routing.location.pathname}/>
-                <Loading />
-                <Route exact={true} path="/perfectPortal/home" component={Home}/>
-                <Route exact={true} path="/perfectPortal/items" component={ItemAppDisplay}/>
-                <Route exact={true} path="/perfectPortal/uploads" component={UploaderDisplay}/>
-                <Route exact={true} path="/perfectPortal/loading" component={Loading}/>
+                <Loading/>
+                <Route exact={true} path="/" component={Home}/>
+                <Route exact={true} path="/items" component={ItemAppDisplay}/>
+                <Route exact={true} path="/uploads" component={UploaderDisplay}/>
             </div>
         </div>
     );

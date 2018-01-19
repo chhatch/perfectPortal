@@ -39,6 +39,8 @@ const uploaderReducer = function (state = initialState, action) {
             }
             //removing first file that was just uploaded..
             return {...state, files: files, successfulUploads: successfulUploads, failedUploads: failedUploads}
+        case "MOVE_FAILED_TO_PENDING":
+            return {...state, files: [...state.files, ...state.failedUploads], failedUploads: []}
         case "SET_UPLOADING_FLAG":
             return {...state, uploading: true}
         case "UNSET_UPLOADING_FLAG":

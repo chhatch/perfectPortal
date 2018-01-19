@@ -22,15 +22,21 @@
 }
 
 .fileCounter {
-    display: inline-block;
+    position: absolute;
+    display: flex;
     width: 100%;
+    z-index: 1
+}
+
+.fileCounterWrapper {
 }
 
 .fileCounterInfo {
-    float: left;
     position: relative;
+    display: flex;
     margin: 5px;
     padding: 5px;
+    height: 16px;
     border-style: solid;
     border-radius: 8px;
     font-size: 16px;
@@ -39,6 +45,12 @@
     color: gray;
     background-color: white;
     cursor: pointer;
+    width: 170px;
+    z-index: 1;
+}
+
+.fileCounterInfo div{
+    flex-grow: 1;
 }
 
 .fileCounterInfo:hover {
@@ -47,10 +59,11 @@
 }
 
 .fileCounterInfoWithDetails {
-    float: left;
     position: relative;
+    display: flex;
     margin: 5px;
     padding: 5px;
+    height: 16px;
     border-style: solid;
     border-radius: 8px 8px 0px 0px;
     font-size: 16px;
@@ -59,6 +72,12 @@
     color: gray;
     background-color: white;
     cursor: pointer;
+    width: 170px;
+    z-index: 1;
+}
+
+.fileCounterInfoWithDetails div{
+    flex-grow: 1;
 }
 
 .fileCounterInfoWithDetails:hover {
@@ -68,10 +87,9 @@
 
 
 .fileCounterDetailsWrapper {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: -2px;
+    position: relative;
+    left: 12px;
+    bottom: 42px;
     border-style: solid;
     border-radius: 8px;
     font-size: 16px;
@@ -83,15 +101,65 @@
     padding-right: 5px;
     padding-left: 5px;
     padding-bottom: 5px;
-    margin-top: -7px;
-    margin-right: 0px;
+    margin-top: 12px;
     margin-left: -7px;
-    margin-bottom: 0px;
-    width: auto;
-    z-index: -1;
-    overflow: hidden;    
+    width: 170px;
+    z-index: auto;
+    overflow: visible;    
 }
 
 .fileCounterDetails {
+    overflow: visible;
+}
+
+.fileDetail {
     overflow: hidden;
+    cursor: pointer;
+}
+
+.fileName {
+    position: absolute;
+    top: -2px;
+    right: -26px;
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 2;
+}
+
+.fileName:hover {
+    visibility: hidden;
+}
+
+.fileDetail:focus > .fileName{
+    visibility: visible;
+}
+
+.fileDetail:hover > .fileName{
+    visibility: visible;
+}
+
+.retryFailedButton {
+    margin-top: -7px;
+    margin-right: -7px;
+    padding: 5px;
+    height: 16px;
+    border-style: solid;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.retryFailedButton:hover {
+    color: black;
+    border: 2px solid black;
 }

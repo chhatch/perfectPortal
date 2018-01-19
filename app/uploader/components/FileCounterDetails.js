@@ -1,3 +1,4 @@
+import { FileName } from "./FileName.js"
 import styles from "../../css modules/uploader.css"
 
 export const FileCounterDetails = (props) => {
@@ -6,7 +7,12 @@ export const FileCounterDetails = (props) => {
             <div className={styles.fileCounterDetailsWrapper}>
                 <div className={styles.fileCounterDetails}>
                     {props.files.map((file) => {
-                        return (<div> {file.name} </div>);
+                        return (<div tabindex="0" className={styles.fileDetail}> 
+                                    <div>
+                                        {file.name}
+                                    </div>
+                                    <FileName name={file.name} />
+                                </div>);
                     })}
                 </div>
             </div>

@@ -13,7 +13,9 @@ export const unsetInitialHomeFlag = () => {
 
 export const initializeHomeApp = () => {
     console.log("Let the initialization begin!!")
-    return (dispatch) => {
-        dispatch(unsetInitialHomeFlag());
+    return (dispatch, getState) => {
+        return new Promise((resolve, reject) => {
+            resolve();
+        });
     }
 }

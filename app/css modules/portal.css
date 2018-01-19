@@ -1,6 +1,7 @@
 .portalDisplay {
     width: 600px;
     height: 100vh;
+    position: relative;
     display: inline-block;
     background-color: rgba(169, 169, 169, 1);
     position: relative;

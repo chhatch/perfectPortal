@@ -99,9 +99,11 @@ export const googleSignIn = parameters => {
 
 export const googleSignOut = () => {
     return (dispatch, getState) => {
+        const home = "/"; //lol
         console.log("Signed out.");
         dispatch(updateSignInStatus(false));
-        return dispatch(unsetIdToken());
+        dispatch(unsetIdToken());
+        return dispatch(routerActions.push(home));
     }
 }
 

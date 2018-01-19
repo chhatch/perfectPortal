@@ -2,6 +2,12 @@
 import { getCurrentProjects } from "../../utilities/googleSheets.js"
 import { fileReader } from "../../utilities/fileUtilities.js"
 
+export const ignore = () => {
+    return {
+        type: "IGNORE"
+    }
+}
+
 export const setInitialUploaderFlag = () => {
     return {
         type: "SET_INITIAL_UPLOADER_FLAG"
@@ -141,5 +147,30 @@ export const uploadToDropBox = () => {
             return dispatch(unsetUploadingFlag());
         }
 
+    }
+}
+
+export const retryFailed = () => {
+    return (dispatch, getState) => {
+        const state = getState(),
+            failedUploads = state.uploaderApp.failedUploads.length > 0,
+            uploading = state.uploaderApp.uploading;
+        if (failedUploads) {
+            dispatch(moveFailedToPending());
+            if (!uploading) {
+                dispatch(setUploadingFlag());
+                return dispatch(uploadToDropBox());
+            }
+        } else {
+            console.log("No failed uploads to retry.")
+            return dispatch(ignore());
+        }
+    }
+}
+
+export const moveFailedToPending = () => {
+            console.log("Moving failed uploads to pending..");
+    return {
+        type: "MOVE_FAILED_TO_PENDING"
     }
 }

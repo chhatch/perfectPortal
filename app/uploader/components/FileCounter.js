@@ -1,5 +1,6 @@
 import styles from "../../css modules/uploader.css"
 import { FileCounterDetails } from "./FileCounterDetails.js"
+import { RetryFailed } from "./RetryFailed.js"
 
 class FileCounter extends React.Component {
     constructor(props) {
@@ -25,23 +26,30 @@ class FileCounter extends React.Component {
             successfulUploads = this.props.successfulUploads,
             successfulDetailsHidden = this.state.successfulDetailsHidden,
             failedUploads = this.props.failedUploads,
-            failedDetailsHidden = this.state.failedDetailsHidden;
+            failedDetailsHidden = this.state.failedDetailsHidden,
+            retryFailed = this.props.retryFailed;
         return (
             <div className={styles.fileCounter}>
-                <div onClick={(e) => {this.showHideDetails("pendingDetailsHidden");}}
-                    className={pendingDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
-                    Pending Uploads: {pendingUploads.length}
+                <div className={styles.fileCounterWrapper}>
+                    <div onClick={(e) => {this.showHideDetails("pendingDetailsHidden");}}
+                        className={pendingDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
+                        <div>Pending: {pendingUploads.length}</div>
+                    </div>
                     < FileCounterDetails files={pendingUploads} hidden={pendingDetailsHidden}/>
                 </div>
-                <div onClick={(e) => {this.showHideDetails("successfulDetailsHidden");}}
-                    className={successfulDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
-                    Successful Uploads: {successfulUploads.length}
+                <div className={styles.fileCounterWrapper}>
+                    <div onClick={(e) => {this.showHideDetails("successfulDetailsHidden");}}
+                        className={successfulDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
+                        <div>Successful: {successfulUploads.length}</div>
+                    </div>
                     < FileCounterDetails files={successfulUploads} hidden={successfulDetailsHidden}/>
                 </div>
-                <div onClick={(e) => {this.showHideDetails("failedDetailsHidden");}}
-                    className={failedDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
-                    Failed Uploads: {failedUploads.length}
-                    < FileCounterDetails files={failedUploads} hidden={failedDetailsHidden}/>
+                <div className={styles.fileCounterWrapper}>
+                    <div onClick={(e) => {this.showHideDetails("failedDetailsHidden");}}
+                        className={failedDetailsHidden ? styles.fileCounterInfo : styles.fileCounterInfoWithDetails}>
+                        <div> Failed: {failedUploads.length} </div> {failedUploads.length > 0 && < RetryFailed retryFailed={retryFailed}/> }
+                    </div>
+                    < FileCounterDetails files={failedUploads} hidden={failedDetailsHidden} fail={true}/>
                 </div>
             </div>
         )

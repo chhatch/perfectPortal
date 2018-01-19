@@ -1,10 +1,6 @@
 <NotepadPlus>
     <Project name="perfectPortal">
         <Folder name="app">
-            <Folder name="actions">
-                <File name="app\actions\actions.js" />
-                <File name="app\actions\robotActions.js" />
-            </Folder>
             <Folder name="components">
                 <File name="app\components\PortalDisplay.js" />
                 <File name="app\components\PortalHeader.js" />
@@ -16,6 +12,15 @@
                 <File name="app\css modules\signInContainer.css" />
                 <File name="app\css modules\signInOutButton.js" />
                 <File name="app\css modules\uploader.css" />
+                <File name="app\css modules\loading.css" />
+            </Folder>
+            <Folder name="actions">
+                <File name="app\actions\actions.js" />
+                <File name="app\actions\robotActions.js" />
+            </Folder>
+            <Folder name="reducers">
+                <File name="app\reducers\portalReducer.js" />
+                <File name="app\reducers\robotReducer.js" />
             </Folder>
             <Folder name="home">
                 <Folder name="actions">
@@ -28,17 +33,38 @@
                     <File name="app\home\reducers\homeAppReducer.js" />
                 </Folder>
             </Folder>
+            <Folder name="uploader">
+                <Folder name="actions">
+                    <File name="app\uploader\actions\actions.js" />
+                </Folder>
+                <Folder name="components">
+                    <File name="app\uploader\components\FileCounter.js" />
+                    <File name="app\uploader\components\FileCounterDetails.js" />
+                    <File name="app\uploader\components\ProjectSelector.js" />
+                    <File name="app\uploader\components\Uploader.js" />
+                    <File name="app\uploader\components\UploaderDisplay.js" />
+                    <File name="app\uploader\components\FileName.js" />
+                    <File name="app\uploader\components\RetryFailed.js" />
+                </Folder>
+                <Folder name="reducers">
+                    <File name="app\uploader\reducers\uploaderAppReducer.js" />
+                </Folder>
+            </Folder>
+            <Folder name="loading">
+                <Folder name="actions">
+                    <File name="app\loading\actions\actions.js" />
+                </Folder>
+                <Folder name="components">
+                    <File name="app\loading\components\Loading.js" />
+                </Folder>
+                <Folder name="reducers">
+                    <File name="app\loading\reducers\uploaderAppReducer.js" />
+                </Folder>
+            </Folder>
             <Folder name="inspectionForm">
                 <Folder name="actions" />
                 <Folder name="components" />
                 <Folder name="reducers" />
-            </Folder>
-            <Folder name="installation">
-                <File name="app\installation\Installation.js" />
-                <File name="app\installation\InstallationDisplay.js" />
-            </Folder>
-            <Folder name="middleware">
-                <File name="app\middleware\actionLogger.js" />
             </Folder>
             <Folder name="productTerminal">
                 <Folder name="actions">
@@ -65,9 +91,12 @@
                     <File name="app\productTerminal\reducers\itemAppReducer.js" />
                 </Folder>
             </Folder>
-            <Folder name="reducers">
-                <File name="app\reducers\portalReducer.js" />
-                <File name="app\reducers\robotReducer.js" />
+            <Folder name="installation">
+                <File name="app\installation\Installation.js" />
+                <File name="app\installation\InstallationDisplay.js" />
+            </Folder>
+            <Folder name="middleware">
+                <File name="app\middleware\actionLogger.js" />
             </Folder>
             <Folder name="template">
                 <Folder name="actions">
@@ -78,21 +107,6 @@
                 </Folder>
                 <Folder name="reducers">
                     <File name="app\template\reducers\uploaderAppReducer.js" />
-                </Folder>
-            </Folder>
-            <Folder name="uploader">
-                <Folder name="actions">
-                    <File name="app\uploader\actions\actions.js" />
-                </Folder>
-                <Folder name="components">
-                    <File name="app\uploader\components\FileCounter.js" />
-                    <File name="app\uploader\components\FileCounterDetails.js" />
-                    <File name="app\uploader\components\ProjectSelector.js" />
-                    <File name="app\uploader\components\Uploader.js" />
-                    <File name="app\uploader\components\UploaderDisplay.js" />
-                </Folder>
-                <Folder name="reducers">
-                    <File name="app\uploader\reducers\uploaderAppReducer.js" />
                 </Folder>
             </Folder>
             <Folder name="utilities">
