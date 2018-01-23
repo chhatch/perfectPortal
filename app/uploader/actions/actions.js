@@ -76,7 +76,11 @@ export const uploadPics = (files) => {
             defaultPath = state.uploaderApp.defaultFolderPath,
             folders = state.uploaderApp.folders,
             projectFolderName = state.uploaderApp.selectedProject.folderName || "Unknown Project",
-            folderPath = checkFolderPath(folders, state.uploaderApp.selectedProject.folderName) || defaultPath + projectFolderName;
+            path = checkFolderPath(folders, projectFolderName);
+        let folderPath = defaultPath + projectFolderName;
+        if(path) {
+            folderPath = path + "/9 - Photos - Finished";
+        }
         for (let file of files) {
             let promise = fileReader(file);
             fileReaderPromiseArray.push(promise);
