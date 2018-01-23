@@ -11,7 +11,11 @@ const initialState = {
     uploading: false,
     files: [],
     successfulUploads: [],
-    failedUploads: []
+    failedUploads: [],
+    folders: [{path: "/30 - Water Slides/Projects - Current", subfolders: []},
+              {path: "/30 - Playgrounds/Projects - Current", subfolders: []},
+              {path: "/30 - Theming/Projects - Current", subfolders: []}],
+    defaultFolderPath: "/Field Uploads/"
 }
 
 const uploaderReducer = function (state = initialState, action) {
@@ -45,6 +49,8 @@ const uploaderReducer = function (state = initialState, action) {
             return {...state, uploading: true}
         case "UNSET_UPLOADING_FLAG":
             return {...state, uploading: false}
+        case "UPDATE_UPLOADER_FOLDERS":
+            return Object.assign({}, state, {folders: action.folders})
         default:
             return state;
     }

@@ -32,7 +32,7 @@ export const getCurrentProjects = (dispatch, getState) => {
                 getSheetValues(id, range, queryParameters, accessToken)
                 .then((response) => {
                     if (!response.ok) {
-                        console.log("Unable to retieve data form Google Sheets.")
+                        console.log("Unable to retrieve data form Google Sheets.")
                     } else {
                         return response.json();
                     }
@@ -76,13 +76,13 @@ const selectCurrentProjects = (spreadsheetData) =>{
             cellBlue = backgroundColors.blue;
             if(cellRed === red && cellGreen === green && cellBlue === blue && cellData.values[0].userEnteredValue) {
                 const name =cellData.values[0].userEnteredValue.stringValue;
-                let folderPath = "";
+                let folderName = "";
                 if (cellData.values[22] && cellData.values[22].userEnteredValue) {
-                    folderPath = cellData.values[22].userEnteredValue.stringValue
+                    folderName = cellData.values[22].userEnteredValue.stringValue
                 }
                 const project = {
                     name: name,
-                    folderPath: folderPath
+                    folderName: folderName
                 }
                 
                     currentProjects.push(project)

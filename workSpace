@@ -17,6 +17,7 @@
             <Folder name="actions">
                 <File name="app\actions\actions.js" />
                 <File name="app\actions\robotActions.js" />
+                <File name="app\actions\dropBox.js" />
             </Folder>
             <Folder name="reducers">
                 <File name="app\reducers\portalReducer.js" />
